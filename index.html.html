@@ -1,0 +1,450 @@
+<title>CB Odontologia</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dra. Carolina Batista — Reabilitação Oral e Estética na Praia da Costa, Vila Velha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Jost:wght@300;400;500&family=Cormorant:ital,wght@1,400;1,500&display=swap">
+<style>
+[hidden]{display:none!important}
+/* Layout: arco (o "B" do monograma) como moldura recorrente; o comparador antes/depois é o centro da página */
+:root{
+  --bg:#F4EAE2; --surface:#FBF6F1; --line:#E3D2C5;
+  --ink:#45302A; --muted:#87695B; --gold:#A9853F; --gold-soft:#D8BD84; --on-gold:#FFFDF9;
+  --shadow:0 30px 60px -30px rgba(69,48,42,.35);
+  --f-display:"Tenor Sans","Optima","Gill Sans",sans-serif;
+  --f-body:"Jost","Avenir Next","Segoe UI",sans-serif;
+  --f-accent:"Cormorant","Cormorant Garamond",Georgia,serif;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1C1512; --surface:#261D19; --line:#3B2E28;
+  --ink:#F1E4DA; --muted:#BBA191; --gold:#D3B26C; --gold-soft:#8E7444; --on-gold:#1C1512;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1C1512; --surface:#261D19; --line:#3B2E28;
+  --ink:#F1E4DA; --muted:#BBA191; --gold:#D3B26C; --gold-soft:#8E7444; --on-gold:#1C1512;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.7); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:.01em}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--f-body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+em.a{font-family:var(--f-accent);font-style:italic;font-weight:500;letter-spacing:0;color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--gold);color:var(--on-gold);
+  font:500 14px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-bottom-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:44px;width:auto}
+.brand span{display:flex;flex-direction:column;line-height:1.15}
+.brand b{font:400 17px var(--f-display);letter-spacing:.14em}
+.brand small{font:400 9.5px var(--f-display);letter-spacing:.2em;color:var(--muted)}
+nav{display:flex;gap:30px}
+nav a{text-decoration:none;font-size:14px;letter-spacing:.06em;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--ink)}
+.bar .btn{padding:11px 18px;font-size:12px}
+@media (max-width:920px){nav{display:none}}
+@media (max-width:520px){.bar .btn span{display:none}.bar .btn{padding:11px}.brand small{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-block:56px 80px}
+.hero h1{font-size:clamp(40px,5.6vw,72px);line-height:1.04;margin:22px 0 24px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:30em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.facts b{display:block;font:400 15px var(--f-display);color:var(--ink);letter-spacing:.04em;margin-bottom:2px}
+.arch{position:relative;justify-self:end;width:min(100%,460px)}
+.arch .frame{aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:var(--shadow);background:var(--surface)}
+.arch .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;animation:settle 1.6s cubic-bezier(.2,.7,.2,1) both}
+.arch::before{content:"";position:absolute;inset:-14px -14px auto -14px;height:calc(100% + 28px - 18px);border:1px solid var(--gold-soft);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
+.arch .tag{position:absolute;left:-28px;bottom:42px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);max-width:240px}
+.arch .tag b{font:400 16px var(--f-display);letter-spacing:.04em;display:block}
+.arch .tag span{font-size:13px;color:var(--muted)}
+@keyframes settle{from{transform:scale(1.08)}to{transform:none}}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:48px;padding-block:28px 64px}.arch{justify-self:center;width:min(100%,380px)}.arch .tag{left:-6px}}
+
+/* section scaffolding */
+section{padding-block:96px}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(32px,4vw,50px);line-height:1.08;margin-top:16px}
+.head p{color:var(--muted);max-width:34em}
+@media (max-width:860px){section{padding-block:72px}.head{grid-template-columns:1fr}}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+
+/* casos — before/after */
+.cases{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.picker{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}
+.group h3{font:500 11px/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.group button{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:11px 2px;font:400 16px var(--f-body);color:var(--ink);cursor:pointer;transition:color .2s,padding .25s}
+.group button::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform .25s}
+.group button:hover{padding-left:8px}
+.group button[aria-pressed="true"]{color:var(--gold)}
+.group button[aria-pressed="true"]::after{transform:scale(1)}
+.stage{min-width:0}
+.compare{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#000;user-select:none;-webkit-user-select:none;touch-action:pan-y;max-height:78vh}
+.compare img{width:100%;height:auto;pointer-events:none}
+.compare .before{position:absolute;inset:0;height:100%;object-fit:cover;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;margin-left:-1px;background:#fff;pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.compare .handle::after{content:"";position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A9853F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E");background-size:24px;background-repeat:no-repeat;background-position:center}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.compare .lbl{position:absolute;top:16px;padding:7px 12px;border-radius:999px;background:rgba(28,21,18,.55);color:#fff;font:500 11px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase;backdrop-filter:blur(6px);pointer-events:none}
+.compare .lbl.l{left:16px}.compare .lbl.r{right:16px}
+.compare:has(input:focus-visible){outline:2px solid var(--gold);outline-offset:4px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.pair figure{position:relative;margin:0;aspect-ratio:4/5;background:#000;min-width:0}
+.pair img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.pair .lbl{position:absolute;top:16px;left:16px;padding:7px 12px;border-radius:999px;background:rgba(28,21,18,.55);color:#fff;font:500 11px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase;backdrop-filter:blur(6px)}
+.caption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:24px;align-items:baseline}
+.caption h3{font-size:clamp(24px,2.6vw,32px)}
+.caption p{color:var(--muted);flex:1 1 320px;max-width:36em}
+.hint{font-size:13px;color:var(--muted);margin-top:14px}
+@media (max-width:860px){.cases{grid-template-columns:1fr;gap:28px}.picker{position:static;flex-direction:row;overflow-x:auto;gap:8px;margin-inline:-20px;padding-inline:20px;scrollbar-width:none}
+ .picker::-webkit-scrollbar{display:none}.group{display:contents}.group h3{display:none}
+ .group button{flex:none;width:auto;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;white-space:nowrap}
+ .group button::after{display:none}.group button:hover{padding-left:16px}.group button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
+ .stage{order:-1}}
+
+/* tratamentos */
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.area{background:var(--bg);border:1px solid var(--line);border-radius:20px 20px 20px 20px;padding:34px 30px 30px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.area .mono{width:46px;height:46px;border-radius:999px 999px 6px 6px;border:1px solid var(--gold-soft);display:grid;place-items:center;font:400 15px var(--f-display);color:var(--gold)}
+.area h3{font-size:24px}
+.area p{color:var(--muted);font-size:15.5px}
+.area ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column}
+.area li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:15.5px}
+.area li a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap}
+.area li a:hover{text-decoration:underline}
+@media (max-width:980px){.areas{grid-template-columns:1fr}}
+
+/* sobre */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about .pic{border-radius:18px 18px 999px 999px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);max-width:440px}
+.about .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.about h2{font-size:clamp(32px,4vw,48px);line-height:1.1;margin:16px 0 22px}
+.about p+p{margin-top:16px}
+.about p{color:var(--muted);max-width:34em}
+.quote{margin-top:30px;padding-left:22px;border-left:1px solid var(--gold);font:italic 500 26px/1.3 var(--f-accent);color:var(--ink);max-width:22em}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:40px}.about .pic{max-width:360px}}
+
+/* jornada */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:1px solid var(--line)}
+.step{padding:28px 26px 0 0;position:relative;min-width:0}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;font:400 13px var(--f-display);letter-spacing:.14em;color:var(--gold);margin-bottom:18px}
+.step::after{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.step h3{font-size:21px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr;gap:36px 24px}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* contato */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:36px;min-width:0}
+.card h3{font-size:28px;margin:14px 0 18px}
+.rows{display:grid;gap:18px;margin-top:8px}
+.row{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line);font-size:16px}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.row dt{font:500 11px/1.9 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.row dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.row dd a{text-decoration:none;border-bottom:1px solid var(--gold-soft)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:6px}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--gold)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.status i{width:8px;height:8px;border-radius:50%;background:#B2876F}
+.status.open i{background:#5E9C6E;box-shadow:0 0 0 4px color-mix(in srgb,#5E9C6E 25%,transparent)}
+.card .btn{margin-top:26px}
+.copy{background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-left:8px;font:400 12px var(--f-body);color:var(--muted);cursor:pointer}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.card{padding:28px 22px}.row{grid-template-columns:1fr;gap:4px}}
+
+/* cta + footer */
+.final{text-align:center;padding-block:100px}
+.final img{height:84px;width:auto;margin:0 auto 26px}
+.final h2{font-size:clamp(32px,4.4vw,56px);line-height:1.08;max-width:16em;margin:0 auto 18px}
+.final p{color:var(--muted);max-width:32em;margin:0 auto 32px}
+footer{border-top:1px solid var(--line);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:var(--gold);text-decoration:none}
+
+.wa{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .25s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.pending{opacity:.001;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 32 32"><path d="M16.02 3C8.83 3 3 8.8 3 15.95c0 2.53.74 4.98 2.13 7.09L3 29l6.13-2.03a13.03 13.03 0 0 0 6.89 1.96C23.2 28.93 29 23.12 29 15.97 29 8.8 23.2 3 16.02 3Zm0 23.73c-2.15 0-4.25-.58-6.08-1.68l-.44-.26-3.64 1.2 1.19-3.53-.29-.46a10.74 10.74 0 0 1-1.65-5.73c0-5.95 4.87-10.8 10.88-10.8 5.99 0 10.85 4.85 10.85 10.82 0 5.96-4.87 10.81-10.82 10.81Zm5.95-8.08c-.32-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.71.08-.32-.16-1.37-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.5.14-.66.15-.14.32-.38.49-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.77-1.01-2.43-.27-.63-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71 0 1.6 1.17 3.14 1.33 3.36.16.21 2.3 3.5 5.57 4.91.78.33 1.39.53 1.86.68.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.13-.3-.21-.62-.37Z"/></symbol></svg>
+
+<header id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Dra. Carolina Batista, início">
+      <img src="c/monograma.png" alt="" width="31" height="44">
+      <span><b>CAROLINA BATISTA</b><small>REABILITAÇÃO ORAL E ESTÉTICA</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#casos">Resultados</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#sobre">A Dra.</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn wa-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span>Agendar</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Praia da Costa · Vila Velha</div>
+      <h1>Seu sorriso, <em class="a">reconstruído</em> com precisão e leveza.</h1>
+      <p class="lead">Reabilitação oral e estética com a Dra. Carolina Batista. Das lentes de contato em cerâmica ao protocolo sobre implantes, cada caso é planejado para o seu rosto.</p>
+      <div class="ctas">
+        <a class="btn wa-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a>
+        <a class="btn ghost" href="#casos">Ver resultados</a>
+      </div>
+      <div class="facts">
+        <div><b>10 tratamentos</b>do implante à harmonização</div>
+        <div><b>Seg a sex</b>das 9h às 19h</div>
+        <div><b>Av. Henrique Moscoso, 90</b>Praia da Costa</div>
+      </div>
+    </div>
+    <figure class="arch" style="margin:0">
+      <div class="frame"><img src="c/dra_carolina.jpg" alt="Dra. Carolina Batista sorrindo no consultório"></div>
+      <figcaption class="tag"><b>Dra. Carolina Batista</b><span>Reabilitação Oral e Estética</span></figcaption>
+    </figure>
+  </div>
+
+  <section id="casos" class="band">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><div class="eyebrow">Casos reais</div><h2>Arraste e veja a <em class="a">diferença</em>.</h2></div>
+        <p>Resultados de pacientes atendidos na clínica. Escolha um tratamento e deslize a linha central para comparar o antes e o depois.</p>
+      </div>
+      <div class="cases">
+        <div class="picker" id="picker" role="group" aria-label="Escolha o tratamento"></div>
+        <div class="stage">
+          <div class="compare" id="compare" style="--p:50%">
+            <img id="imgAfter" alt="">
+            <img id="imgBefore" class="before" alt="">
+            <span class="lbl l">Antes</span><span class="lbl r">Depois</span>
+            <div class="handle"></div>
+            <input id="range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar antes e depois">
+          </div>
+          <div class="pair" id="pair" hidden>
+            <figure><img id="pairBefore" alt=""><span class="lbl">Antes</span></figure>
+            <figure><img id="pairAfter" alt=""><span class="lbl">Depois</span></figure>
+          </div>
+          <div class="caption"><h3 id="capTitle"></h3><p id="capText"></p></div>
+          <p class="hint">Resultados variam de pessoa para pessoa. Imagens publicadas com autorização dos pacientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tratamentos">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><div class="eyebrow">Tratamentos</div><h2>Função, estética e harmonia em um só lugar.</h2></div>
+        <p>Três frentes de cuidado que se completam. Muitas vezes o melhor resultado vem da combinação delas, definida na avaliação.</p>
+      </div>
+      <div class="areas" id="areas"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="band">
+    <div class="wrap about">
+      <div class="pic reveal"><img src="c/dra_carolina.jpg" alt="Retrato da Dra. Carolina Batista" loading="lazy"></div>
+      <div class="reveal">
+        <div class="eyebrow">Quem cuida de você</div>
+        <h2>Dra. Carolina Batista</h2>
+        <p>Cirurgiã-dentista com atuação em reabilitação oral e estética. Seu trabalho une a parte técnica, devolver mastigação, encaixe e segurança, ao olhar estético que deixa o resultado natural e com a sua cara.</p>
+        <p>Cada tratamento começa com escuta e planejamento. Você entende cada etapa, o tempo previsto e as opções possíveis antes de qualquer decisão.</p>
+        <p class="quote">“Um sorriso bonito precisa, antes de tudo, funcionar bem.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head reveal">
+        <div><div class="eyebrow">Como funciona</div><h2>Da primeira conversa ao sorriso final.</h2></div>
+        <p>Um caminho claro, sem surpresas, para tratamentos simples ou reabilitações completas.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><h3>Avaliação</h3><p>Conversa sobre o que te incomoda, exame clínico e fotos do sorriso.</p></div>
+        <div class="step"><h3>Planejamento</h3><p>Plano de tratamento com etapas, prazos e opções explicadas com calma.</p></div>
+        <div class="step"><h3>Tratamento</h3><p>Procedimentos feitos com conforto, no ritmo que o seu caso pede.</p></div>
+        <div class="step"><h3>Acompanhamento</h3><p>Retornos para manter o resultado e a saúde da boca a longo prazo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="band">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><div class="eyebrow">Contato</div><h2>Agende sua avaliação.</h2></div>
+        <p>O atendimento é feito pelo WhatsApp. Envie uma mensagem e a equipe encontra o melhor horário para você.</p>
+      </div>
+      <div class="contact">
+        <div class="card reveal">
+          <span class="status" id="status"><i></i><span>Horário de atendimento</span></span>
+          <h3>Clínica CB Odontologia</h3>
+          <dl class="rows">
+            <div class="row"><dt>Endereço</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=Avenida+Henrique+Moscoso+90+Praia+da+Costa+Vila+Velha+ES" target="_blank" rel="noopener">Av. Henrique Moscoso, 90<br>Praia da Costa, Vila Velha – ES<br>CEP 29100-650</a></dd></div>
+            <div class="row"><dt>WhatsApp</dt><dd><span id="phone">(27) 96000-0144</span><button class="copy" data-copy="(27) 96000-0144" type="button">copiar</button></dd></div>
+            <div class="row"><dt>E-mail</dt><dd><span>dracarolinabatistam@gmail.com</span><button class="copy" data-copy="dracarolinabatistam@gmail.com" type="button">copiar</button></dd></div>
+          </dl>
+          <a class="btn wa-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        </div>
+        <div class="card reveal">
+          <div class="eyebrow">Horários</div>
+          <h3>Seg a sex, 9h às 19h</h3>
+          <table class="hours" id="hours">
+            <tbody>
+              <tr data-d="1"><td>Segunda</td><td>09:00 – 19:00</td></tr>
+              <tr data-d="2"><td>Terça</td><td>09:00 – 19:00</td></tr>
+              <tr data-d="3"><td>Quarta</td><td>09:00 – 19:00</td></tr>
+              <tr data-d="4"><td>Quinta</td><td>09:00 – 19:00</td></tr>
+              <tr data-d="5"><td>Sexta</td><td>09:00 – 19:00</td></tr>
+              <tr data-d="6"><td>Sábado</td><td>Fechado</td></tr>
+              <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap final reveal">
+    <img src="c/monograma.png" alt="" width="60" height="84">
+    <h2>O próximo antes e depois pode ser o seu.</h2>
+    <p>Marque uma avaliação e descubra o tratamento ideal para o seu sorriso.</p>
+    <a class="btn wa-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Dra. Carolina Batista · Reabilitação Oral e Estética · Vila Velha – ES</span>
+    <span>Site por <a href="https://j-created.github.io/HOME" target="_blank" rel="noopener">J.Created</a></span>
+  </div>
+</footer>
+
+<a class="wa wa-link" href="#" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+const WA = 'https://wa.me/5527960000144?text=' + encodeURIComponent('Olá, Dra. Carolina! Vim pelo site e gostaria de agendar uma avaliação.');
+document.querySelectorAll('.wa-link').forEach(a => a.href = WA);
+
+const GROUPS = [
+  {k:'RO', name:'Reabilitação oral', text:'Para quem perdeu dentes ou tem desgastes. Devolve mastigação, firmeza e confiança para sorrir.',
+   items:['protocolo','coroa','protese']},
+  {k:'ES', name:'Estética do sorriso', text:'Cor, forma e proporção dos dentes e da gengiva ajustadas para um sorriso natural.',
+   items:['lentes','facetas','clareamento','gengival']},
+  {k:'HO', name:'Harmonização orofacial', text:'Procedimentos que equilibram lábios e rosto e completam o resultado do sorriso.',
+   items:['toxina','labial','bichectomia']}
+];
+const CASES = {
+  lentes:{f:'01_lentes_de_contato_ceramica',t:'Lentes de contato cerâmica',d:'Lâminas finas de porcelana fixadas na frente dos dentes para corrigir cor, formato e pequenos espaços, com brilho e durabilidade.'},
+  coroa:{f:'02_coroa_sobre_implantes',t:'Coroa sobre implantes',d:'Coroa fixa instalada sobre o implante para repor dentes perdidos com aparência e firmeza de dente natural.'},
+  gengival:{f:'03_cirurgia_gengival_estetica',t:'Cirurgia gengival estética',d:'Recontorno da gengiva para equilibrar a proporção entre dentes e gengiva e reduzir o sorriso gengival.'},
+  protese:{f:'04_protese_movel',t:'Prótese móvel',d:'Peça removível que repõe vários dentes, recuperando a mastigação e a estética de forma acessível.'},
+  clareamento:{f:'05_clareamento',t:'Clareamento',d:'Clareamento supervisionado para deixar os dentes mais claros com segurança e controle da sensibilidade.'},
+  facetas:{side:1,f:'06_facetas_de_resina',t:'Facetas de resina',d:'Resina aplicada direto no dente para ajustar forma e cor, em poucas sessões e sem desgaste agressivo.'},
+  bichectomia:{side:1,f:'07_bichectomia',t:'Bichectomia',d:'Remoção das bolas de Bichat para afinar o terço inferior do rosto e valorizar o contorno facial.'},
+  labial:{f:'08_preenchimento_labial',t:'Preenchimento labial',d:'Ácido hialurônico para dar volume, contorno e hidratação aos lábios, respeitando suas proporções.'},
+  toxina:{f:'09_toxina_botulinica',t:'Toxina botulínica',d:'Suaviza linhas de expressão, como as da testa, com aplicação rápida e resultado natural.'},
+  protocolo:{f:'10_protocolo_ceramico',t:'Protocolo cerâmico',d:'Prótese fixa de cerâmica sobre 4 a 6 implantes, para quem perdeu todos os dentes de uma arcada.'}
+};
+
+const picker = document.getElementById('picker'), areas = document.getElementById('areas');
+GROUPS.forEach(g => {
+  const div = document.createElement('div'); div.className = 'group';
+  div.innerHTML = `<h3>${g.name}</h3>`;
+  g.items.forEach(id => {
+    const b = document.createElement('button'); b.type = 'button'; b.id = 'pick-' + id;
+    b.textContent = CASES[id].t; b.dataset.id = id; b.setAttribute('aria-pressed', 'false');
+    b.onclick = () => show(id); div.appendChild(b);
+  });
+  picker.appendChild(div);
+
+  const a = document.createElement('article'); a.className = 'area reveal';
+  a.innerHTML = `<div class="mono">${g.k}</div><h3>${g.name}</h3><p>${g.text}</p><ul>${
+    g.items.map(id => `<li><span>${CASES[id].t}</span><a href="#casos" data-id="${id}">ver caso</a></li>`).join('')}</ul>`;
+  areas.appendChild(a);
+});
+areas.addEventListener('click', e => { const id = e.target.dataset && e.target.dataset.id; if (id) show(id); });
+
+const cmp = document.getElementById('compare'), range = document.getElementById('range');
+const A = document.getElementById('imgAfter'), B = document.getElementById('imgBefore');
+function setP(v){ cmp.style.setProperty('--p', v + '%'); }
+range.addEventListener('input', () => setP(range.value));
+function show(id){
+  const c = CASES[id];
+  const side = !!c.side, pair = document.getElementById('pair');
+  cmp.hidden = side; pair.hidden = !side;
+  const [a, b] = side ? [document.getElementById('pairAfter'), document.getElementById('pairBefore')] : [A, B];
+  a.src = `c/${c.f}_depois.jpg`; b.src = `c/${c.f}_antes.jpg`;
+  a.alt = `${c.t}: depois`; b.alt = `${c.t}: antes`;
+  document.getElementById('capTitle').textContent = c.t;
+  document.getElementById('capText').textContent = c.d;
+  picker.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === id));
+  range.value = 50; setP(50);
+  const btn = document.getElementById('pick-' + id);
+  if (btn && picker.scrollWidth > picker.clientWidth) picker.scrollTo({left: btn.offsetLeft - 20, behavior: 'smooth'});
+}
+show('lentes');
+Object.values(CASES).forEach(c => { ['antes','depois'].forEach(s => { const i = new Image(); i.src = `c/${c.f}_${s}.jpg`; }); });
+
+/* horário — fuso de Vila Velha */
+(function(){
+  try{
+    const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    const g = t => parts.find(p => p.type === t).value;
+    const day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday'));
+    const mins = (+g('hour') % 24) * 60 + +g('minute');
+    const row = document.querySelector(`#hours tr[data-d="${day}"]`); if (row) row.classList.add('today');
+    const open = day >= 1 && day <= 5 && mins >= 540 && mins < 1140;
+    const st = document.getElementById('status');
+    st.classList.toggle('open', open);
+    st.lastElementChild.textContent = open ? 'Aberto agora' : 'Fechado agora';
+  }catch(e){}
+})();
+
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+  const done = () => { const t = b.textContent; b.textContent = 'copiado'; setTimeout(() => b.textContent = t, 1500); };
+  if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.copy).then(done).catch(() => {
+    const r = document.createRange(); r.selectNodeContents(b.previousElementSibling); const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  });
+}));
+
+const header = document.querySelector('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), {passive:true});
+
+/* entrada suave: só esconde o que está abaixo da dobra */
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.remove('pending'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top > innerHeight){ el.classList.add('pending'); io.observe(el); }
+  });
+}
+</script>
